@@ -19,7 +19,7 @@
           if (targetSection) {
             // Close mobile menu if open
             mobileMenu.classList.remove('open');
-            
+             
             // Smooth scroll to section
             targetSection.scrollIntoView({
               behavior: 'smooth'
