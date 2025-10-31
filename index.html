@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Damsole Technologies - AI Powered E-Commerce</title>
   <link rel="icon" type="image/x-icon" href="assets/images/Damsole_Technology_Logo.png">
+  <!-- styles link -->
   <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- font awesome link -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
   <header class="site-header">
@@ -38,7 +41,7 @@
           <span class="bar"></span>
           <span class="bar"></span>
         </button>
-        <button class="btn btn-ghost">Sign up</button>
+        <button class="btn btn-ghost"><i class="fa-regular fa-user" style="color: #001e8e;"></i>Sign up</button>
         <button class="btn btn-primary">Buy now!</button>
       </div>
 
@@ -58,16 +61,26 @@
   <main>
     <!-- Hero Section -->
     <section class="hero-section">
+      <!-- decorative left artwork (behind content) -->
+      <div class="hero-decor-left" aria-hidden="true">
+        <!-- simple abstract line-art SVG, tuned to reference -->
+        <svg width="260" height="220" viewBox="0 0 260 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g opacity="0.14" fill="none" stroke="#00C853" stroke-width="2">
+            <path d="M10 30c30-20 70-40 110-28s80 36 120 12" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M20 60c28-16 64-34 104-20s84 42 116 24" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M6 100c36-12 76-30 116-16s84 40 120 28" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+        </svg>
+      </div>
       <div class="hero-inner">
         <div class="hero-left">
-          <div class="hero-badge">🥇 Award-winning digital services</div>
+          <div class="hero-badge">🤩 Award-winning digital services</div>
 
-          <h1 class="hero-title">
-            Creative studio focused
-            <span class="hero-title-break">on</span>
-            <span class="highlight">Web Del</span>
-            <span class="cursor">|</span>
-          </h1>
+            <h1 class="hero-title">
+              Creative studio focused on&nbsp;
+              <span class="typed-inline" role="status" aria-live="polite"></span>
+              <span class="typed-caret" aria-hidden="true">|</span>
+            </h1>
 
           <p class="hero-subtitle">
             From concept to execution, we deliver web designs that make an impact. Let your brand shine with our innovative and visually stunning websites.
@@ -137,15 +150,33 @@
       </div>
     </section>
 
-    <!-- Placeholder section below hero -->
-    <section id="demos" class="content-section">
-      <div class="section-inner">
-        <h2>Welcome to Damsole Technologies</h2>
-        <p>Your partner in AI-powered e-commerce solutions.</p>
+    <!-- Companies Carousel Section -->
+    <section class="companies-carousel">
+      <div class="carousel-inner">
+        <div class="carousel-left">
+          <div class="carousel-heading">
+            <span class="carousel-main">100+ Companies</span><br>
+            <span class="carousel-sub">trust us</span>
+          </div>
+        </div>
+        <div class="carousel-right">
+          <div class="carousel-logos-slider">
+            <div class="carousel-track">
+              <img src="https://themes.stackbros.in/mizzle-nextjs/assets/02-CNrQxMCQ.svg" alt="Logoipsum" class="carousel-logo">
+              <img src="https://themes.stackbros.in/mizzle-nextjs/assets/03-U4-LnlIf.svg" alt="PinPoint" class="carousel-logo">
+              <img src="https://themes.stackbros.in/mizzle-nextjs/assets/04-DIif0UuJ.svg" alt="logoipsum" class="carousel-logo">
+              <img src="https://themes.stackbros.in/mizzle-nextjs/assets/05-DXnxcGDU.svg" alt="Sitemark" class="carousel-logo">
+              <img src="https://themes.stackbros.in/mizzle-nextjs/assets/01-B53qfMjw.svg" alt="Greenish" class="carousel-logo">
+              <img src="https://themes.stackbros.in/mizzle-nextjs/assets/01-B53qfMjw.svg" alt="Greenish" class="carousel-logo">
+            </div>
+          </div>
+        </div>
       </div>
     </section>
+
+    <!-- Placeholder section below hero removed -->
   </main>
 
-  <script src="assets/js/main.js"></script>
+  <script src="./js/main.js"></script>
 </body>
 </html>

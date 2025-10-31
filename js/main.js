@@ -1,3 +1,15 @@
+  // ================== Companies Carousel Slider Animation ==================
+  const carouselTrack = document.querySelector('.carousel-track');
+  if (carouselTrack) {
+    // Duplicate logos for seamless loop
+    const logos = Array.from(carouselTrack.children);
+    logos.forEach(logo => {
+      const clone = logo.cloneNode(true);
+      carouselTrack.appendChild(clone);
+    });
+    // No JS animation needed, CSS handles smooth sliding
+  }
+// No JS for deleted placeholder section, so no changes needed.
 document.addEventListener('DOMContentLoaded', function() {
   // ================== Mobile Menu ==================
   const mobileToggle = document.querySelector('.mobile-toggle');
@@ -74,45 +86,44 @@ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('scroll', updateActiveLink);
 
   // ================== Typing Animation ==================
-  const typedTextSpan = document.querySelector('.typed-text');
-  const cursorSpan = document.querySelector('.cursor');
+  // New typing: inline typed word inside heading
+  const typedSpan = document.querySelector('.typed-inline');
+  const caretSpan = document.querySelector('.typed-caret');
 
-  if (typedTextSpan && cursorSpan) {
-    const textArray = ['UI/UX Designer', 'Web Developer', 'Web Designer', 'Software Developer'];
+  if (typedSpan && caretSpan) {
+  // Updated words to match requested ordering/labels
+  const words = ['Web Dev', 'UI/UX Design', 'Web Design'];
     const typingDelay = 100;
     const erasingDelay = 50;
-    const newTextDelay = 2000;
-    let textArrayIndex = 0;
+    const newTextDelay = 1800;
+    let wIndex = 0;
     let charIndex = 0;
 
     function type() {
-      if (charIndex < textArray[textArrayIndex].length) {
-        if (!cursorSpan.classList.contains('typing')) cursorSpan.classList.add('typing');
-        typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+      if (charIndex < words[wIndex].length) {
+        typedSpan.textContent += words[wIndex].charAt(charIndex);
         charIndex++;
         setTimeout(type, typingDelay);
       } else {
-        cursorSpan.classList.remove('typing');
         setTimeout(erase, newTextDelay);
       }
     }
 
     function erase() {
       if (charIndex > 0) {
-        if (!cursorSpan.classList.contains('typing')) cursorSpan.classList.add('typing');
-        typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
+        typedSpan.textContent = words[wIndex].substring(0, charIndex - 1);
         charIndex--;
         setTimeout(erase, erasingDelay);
       } else {
-        cursorSpan.classList.remove('typing');
-        textArrayIndex++;
-        if (textArrayIndex >= textArray.length) textArrayIndex = 0;
-        setTimeout(type, typingDelay + 1100);
+        wIndex = (wIndex + 1) % words.length;
+        setTimeout(type, typingDelay + 500);
       }
     }
 
-    setTimeout(type, newTextDelay + 250);
+    // start
+    setTimeout(type, 600);
   }
+    // Typing animation now appears on a new line below the heading
 
   // ================== Handle Resize ==================
   window.addEventListener('resize', function() {
