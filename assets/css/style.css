@@ -33,6 +33,7 @@
       color: var(--text);
       font-family: Segoe UI, Roboto, system-ui, -apple-system, 'Helvetica Neue', Arial;
       transition: background .25s ease, color .25s ease;
+      min-height: 100vh;
     }
 
     /* Header */
@@ -195,6 +196,9 @@
       margin-top: 80px;
       padding: 80px 20px 60px;
       background: var(--surface);
+      min-height: calc(100vh - 80px);
+      display: flex;
+      align-items: center;
     }
 
     .hero-inner {
@@ -283,173 +287,9 @@
       box-shadow: 0 20px 40px rgba(0,0,0,0.1);
     }
 
-    /* AI Dashboard Section */
-    .ai-dashboard {
-      background: var(--bg);
-      padding: 80px 20px;
-    }
-
-    .dashboard-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: start;
-    }
-
-    .dashboard-stats {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-    }
-
-    .stat-card {
-      background: var(--surface);
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-      border: 1px solid rgba(0,0,0,0.08);
-    }
-
-    .stat-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 20px;
-    }
-
-    .stat-number {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: var(--accent);
-    }
-
-    .stat-title {
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--text);
-    }
-
-    .features-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-bottom: 20px;
-    }
-
-    .feature-item {
-      background: rgba(230, 66, 71, 0.08);
-      padding: 12px;
-      border-radius: 8px;
-      text-align: center;
-      color: var(--text);
-      font-weight: 500;
-    }
-
-    .ai-chat-container {
-      background: #f8fafc;
-      border-radius: 12px;
-      padding: 20px;
-      margin-bottom: 20px;
-    }
-
-    .chat-message {
-      color: #64748b;
-      font-size: 0.9rem;
-      line-height: 1.5;
-    }
-
-    .rank-badge {
-      background: var(--accent);
-      color: white;
-      padding: 8px 16px;
-      border-radius: 20px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      display: inline-block;
-      margin-bottom: 15px;
-    }
-
-    .metric-item {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 0;
-      border-bottom: 1px solid rgba(0,0,0,0.1);
-    }
-
-    .metric-label {
-      color: var(--muted);
-      font-weight: 500;
-    }
-
-    .metric-value {
-      color: var(--text);
-      font-weight: 600;
-    }
-
-    .search-stats {
-      background: var(--surface);
-      padding: 20px;
-      border-radius: 12px;
-      text-align: center;
-      margin: 20px 0;
-    }
-
-    .search-number {
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--accent);
-      margin-bottom: 5px;
-    }
-
-    .search-label {
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-
-    .ai-suggestion-card {
-      background: var(--surface);
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-      border: 1px solid rgba(0,0,0,0.08);
-    }
-
-    .suggestion-title {
-      font-weight: 600;
-      margin-bottom: 12px;
-      color: var(--text);
-      font-size: 1.1rem;
-    }
-
-    .suggestion-desc {
-      color: var(--muted);
-      font-size: 0.95rem;
-      margin-bottom: 20px;
-      line-height: 1.5;
-    }
-
-    .suggestion-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .tag {
-      background: rgba(230, 66, 71, 0.1);
-      color: var(--accent);
-      padding: 6px 12px;
-      border-radius: 6px;
-      font-size: 0.85rem;
-      font-weight: 600;
-    }
-
     /* Responsive */
     @media (max-width: 900px) {
-      .hero-inner,
-      .dashboard-inner {
+      .hero-inner {
         grid-template-columns: 1fr;
         gap: 40px;
       }
@@ -464,10 +304,6 @@
       
       .mobile-toggle {
         display: inline-flex;
-      }
-      
-      .features-grid {
-        grid-template-columns: 1fr;
       }
     }
 
@@ -489,16 +325,8 @@
         flex-direction: column;
         align-items: stretch;
       }
-      
-      .stat-number {
-        font-size: 2rem;
-      }
     }
 
     [data-theme="dark"] .site-header {
       border-bottom-color: rgba(255, 255, 255, 0.04);
-    }
-
-    [data-theme="dark"] .ai-chat-container {
-      background: #0f172a;
     }
