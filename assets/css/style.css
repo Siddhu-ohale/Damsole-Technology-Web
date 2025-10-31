@@ -1,3 +1,59 @@
+/* About/Feature Section - Improved Layout */
+.about-feature-images-row {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    align-items: flex-start;
+}
+.about-img-main {
+    position: relative;
+    flex: 1 1 0;
+    min-width: 260px;
+    max-width: 340px;
+}
+.about-img-side-stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    min-width: 260px;
+    max-width: 340px;
+}
+.about-feature-stats {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 12px;
+    justify-content: center;
+}
+.about-img-side {
+    align-self: flex-start;
+}
+.about-img {
+    width: 100%;
+    max-width: 320px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+}
+
+
+@media (max-width: 1024px) {
+    .about-feature-images-row {
+        flex-direction: column;
+        gap: 18px;
+        align-items: center;
+    }
+    .about-img-main, .about-img-side-stats {
+        min-width: 180px;
+        max-width: 260px;
+    }
+    .about-img {
+        max-width: 220px;
+        height: 220px;
+    }
+}
+
 /* Companies Carousel Slider Animation */
 .carousel-logos-slider {
     overflow: hidden;
@@ -43,84 +99,7 @@
     align-items: center;
     min-width: 220px;
 }
-/* Companies Carousel Section */
-.companies-carousel {
-    width: 100%;
-    background: var(--surface);
-    padding: 32px 0 24px 0;
-    margin-top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 1px solid #eee;
-}
-.carousel-inner {
-    max-width: 1200px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 32px;
-}
-.carousel-left {
-    min-width: 220px;
-}
-.carousel-heading {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--text);
-    line-height: 1.1;
-}
-.carousel-main {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--text);
-}
-.carousel-sub {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--text);
-}
-.carousel-right {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-.carousel-logos {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-    overflow-x: auto;
-    padding-left: 12px;
-}
-/* Carousel logo grayscale effect */
-.carousel-logo {
-    height: 40px;
-    width: auto;
-    filter: grayscale(1) brightness(0.7);
-    opacity: 0.7;
-    transition: filter 0.3s, opacity 0.3s;
-    cursor: pointer;
-}
-.carousel-logo:hover {
-    filter: none;
-    opacity: 1;
-}
-@media (max-width: 768px) {
-    .carousel-inner {
-        flex-direction: column;
-        gap: 18px;
-        text-align: center;
-    }
-    .carousel-left {
-        min-width: unset;
-    }
-    .carousel-logos {
-        gap: 24px;
-        justify-content: center;
-    }
-}
+
 /* Typing animation second line below heading */
 .typed-row {
     display: block;
@@ -1098,4 +1077,261 @@ body {
 
 .mobile-toggle.active .bar:nth-child(3) {
     transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Companies Carousel Section */
+.companies-carousel {
+    width: 100%;
+    background: var(--surface);
+    padding: 32px 0 24px 0;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+.carousel-inner {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+}
+.carousel-left {
+    min-width: 220px;
+}
+.carousel-heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.1;
+}
+.carousel-main {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text);
+}
+.carousel-sub {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text);
+}
+.carousel-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.carousel-logos {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    overflow-x: auto;
+    padding-left: 12px;
+}
+/* Carousel logo grayscale effect */
+.carousel-logo {
+    height: 40px;
+    width: auto;
+    filter: grayscale(1) brightness(0.7);
+    opacity: 0.7;
+    transition: filter 0.3s, opacity 0.3s;
+    cursor: pointer;
+}
+.carousel-logo:hover {
+    filter: none;
+    opacity: 1;
+}
+@media (max-width: 768px) {
+    .carousel-inner {
+        flex-direction: column;
+        gap: 18px;
+        text-align: center;
+    }
+    .carousel-left {
+        min-width: unset;
+    }
+    .carousel-logos {
+        gap: 24px;
+        justify-content: center;
+    }
+}
+
+/* About/Feature Section Styles */
+.about-feature-section {
+    width: 100%;
+    background: var(--surface);
+    padding: 64px 0 32px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-feature-inner {
+    max-width: 1200px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    align-items: center;
+}
+.about-feature-left {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.about-feature-stats {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 12px;
+}
+.about-stat {
+    border-radius: 12px;
+    padding: 18px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 120px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.04);
+}
+.about-stat-dark {
+    background: #18181b;
+    color: #fff;
+}
+.about-stat-green {
+    background: #00C853;
+    color: #fff;
+}
+.about-stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+.about-stat-label {
+    font-size: 1rem;
+    font-weight: 500;
+}
+.about-feature-images {
+    display: flex;
+    gap: 18px;
+}
+.about-img-main {
+    position: relative;
+}
+.about-img-side {
+    align-self: flex-end;
+}
+.about-img {
+    width: 260px;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 9px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+}
+
+.about-feature-right {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: flex-start;
+}
+.about-feature-label {
+    background: #f7fafc;
+    color: var(--text);
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 6px 18px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.about-feature-label-icon {
+    font-size: 1.1rem;
+}
+.about-feature-title {
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 0;
+}
+.about-feature-desc {
+    font-size: 1.1rem;
+    color: var(--muted);
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+.about-feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.about-feature-list-icon {
+    color: #00C853;
+    font-size: 1.1rem;
+    margin-right: 8px;
+}
+.about-feature-btn {
+    background: #18181b;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 32px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: background 0.2s;
+}
+.about-feature-btn:hover {
+    background: #00C853;
+    color: #fff;
+}
+@media (max-width: 1024px) {
+    .about-feature-inner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    .about-feature-images {
+        flex-direction: row;
+        gap: 12px;
+    }
+    .about-img {
+        width: 200px;
+        height: 200px;
+    }
+}
+@media (max-width: 768px) {
+    .about-feature-section {
+        padding: 32px 0 18px 0;
+    }
+    .about-feature-inner {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+    .about-feature-left {
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+    }
+    .about-feature-images {
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+    }
+    .about-img {
+        width: 140px;
+        height: 140px;
+    }
+    .about-feature-title {
+        font-size: 1.5rem;
+    }
+    .about-feature-btn {
+        padding: 10px 18px;
+        font-size: 1rem;
+    }
 }
