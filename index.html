@@ -3,10 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Damsole Technologies</title>
+  <title>Damsole Technologies - AI Powered E-Commerce</title>
   <link rel="icon" type="image/x-icon" href="assets/images/logo_dd2.png">
   <link rel="stylesheet" href="assets/css/style.css" />
-
 </head>
 <body>
   <header class="site-header">
@@ -17,13 +16,13 @@
 
       <nav class="main-nav" aria-label="Main navigation">
         <ul>
-          <li><a data-scroll="home">Home</a></li>
-          <li><a data-scroll="about">About</a></li>
-          <li><a data-scroll="services">Services</a></li>
-          <li><a data-scroll="portfolio">Portfolio</a></li>
-          <li><a data-scroll="contact">Contact</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
-      </nav> 
+      </nav>
 
       <div class="header-actions">
         <button class="mobile-toggle" aria-label="Open menu">
@@ -38,11 +37,11 @@
       <div class="mobile-menu">
         <nav class="mobile-nav" aria-label="Mobile navigation">
           <ul>
-            <li><a data-scroll="home">Home</a></li>
-            <li><a data-scroll="about">About</a></li>
-            <li><a data-scroll="services">Services</a></li>
-            <li><a data-scroll="portfolio">Portfolio</a></li>
-            <li><a data-scroll="contact">Contact</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -50,33 +49,66 @@
   </header>
 
   <main>
-    <section id="home" class="section">
-      <h1>Home Section</h1>
-      <p>Welcome to Damsole Technologies - Your trusted partner for innovative solutions.</p>
+    <!-- Home Section -->
+    <section id="home" class="hero-section">
+      <div class="hero-inner">
+        <!-- Left Content -->
+        <div class="hero-left">
+          <h1 class="hero-title">
+            E-Commerce Revolutionized with <span class="hero-title-accent">AI Powered</span>
+          </h1>
+          <p class="hero-subtitle">
+            Boost sales, enhance customer experience, and streamline operations with our cutting-edge AI technology.
+          </p>
+          <div class="hero-cta">
+            <input type="email" class="email-input" placeholder="Enter your email">
+            <button class="cta-button">Get Started</button>
+          </div>
+          <p class="trial-note">
+            30 day free trial, no credit card required.
+          </p>
+        </div>
+
+        <!-- Right Content - Image -->
+        <div class="hero-image-container">
+          <img src="assets/images/HeroSection-main-img.png" alt="AI E-Commerce Dashboard" class="hero-image">
+        </div>
+      </div>
     </section>
 
-    <section id="about" class="section">
-      <h1>About Us</h1>
-      <p>Learn more about our company and our mission to deliver exceptional services.</p>
+    <!-- About Section -->
+    <section id="about" class="content-section">
+      <div class="section-inner">
+        <h2>About Us</h2>
+        <p>Learn more about our company and mission.</p>
+      </div>
     </section>
 
-    <section id="services" class="section">
-      <h1>Our Services</h1>
-      <p>Discover the range of services we offer to help your business grow.</p>
+    <!-- Services Section -->
+    <section id="services" class="content-section">
+      <div class="section-inner">
+        <h2>Our Services</h2>
+        <p>Discover our range of AI-powered services.</p>
+      </div>
     </section>
 
-    <section id="portfolio" class="section">
-      <h1>Portfolio</h1>
-      <p>Explore our successful projects and client work.</p>
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="content-section">
+      <div class="section-inner">
+        <h2>Portfolio</h2>
+        <p>View our successful projects and case studies.</p>
+      </div>
     </section>
 
-    <section id="contact" class="section">
-      <h1>Contact Us</h1>
-      <p>Get in touch with us to discuss your next project.</p>
+    <!-- Contact Section -->
+    <section id="contact" class="content-section">
+      <div class="section-inner">
+        <h2>Contact Us</h2>
+        <p>Get in touch with our team.</p>
+      </div>
     </section>
   </main>
 
-
-<script src="js/main.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
