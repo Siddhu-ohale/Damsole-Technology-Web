@@ -1,15 +1,15 @@
-  // ================== Companies Carousel Slider Animation ==================
-  const carouselTrack = document.querySelector('.carousel-track');
-  if (carouselTrack) {
-    // Duplicate logos for seamless loop
-    const logos = Array.from(carouselTrack.children);
-    logos.forEach(logo => {
-      const clone = logo.cloneNode(true);
-      carouselTrack.appendChild(clone);
-    });
-    // No JS animation needed, CSS handles smooth sliding
-  }
-// No JS for deleted placeholder section, so no changes needed.
+// ================== Companies Carousel Slider Animation ==================
+const carouselTrack = document.querySelector('.carousel-track');
+if (carouselTrack) {
+  // Duplicate logos for seamless loop
+  const logos = Array.from(carouselTrack.children);
+  logos.forEach(logo => {
+    const clone = logo.cloneNode(true);
+    carouselTrack.appendChild(clone);
+  });
+  // No JS animation needed, CSS handles smooth sliding
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   // ================== Mobile Menu ==================
   const mobileToggle = document.querySelector('.mobile-toggle');
@@ -91,8 +91,8 @@ document.addEventListener('DOMContentLoaded', function() {
   const caretSpan = document.querySelector('.typed-caret');
 
   if (typedSpan && caretSpan) {
-  // Updated words to match requested ordering/labels
-  const words = ['Web Dev', 'UI/UX Design', 'Web Design'];
+    // Updated words to match requested ordering/labels
+    const words = ['Web Dev', 'UI/UX Design', 'Web Design'];
     const typingDelay = 100;
     const erasingDelay = 50;
     const newTextDelay = 1800;
@@ -123,7 +123,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // start
     setTimeout(type, 600);
   }
-    // Typing animation now appears on a new line below the heading
 
   // ================== Handle Resize ==================
   window.addEventListener('resize', function() {
